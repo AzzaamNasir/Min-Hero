@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv5viyc7da68c"]
+
+[ext_resource type="Script" path="res://floors/floor_manager.gd" id="1_0q7mx"]
+[ext_resource type="PackedScene" uid="uid://cd28ri7gatabw" path="res://ui/main_ui.tscn" id="2_wvmvo"]
+[ext_resource type="PackedScene" uid="uid://dh51p6fm3ucua" path="res://characters/player/player.tscn" id="3_qoj6a"]
+[ext_resource type="PackedScene" uid="uid://jl5u1eevbiua" path="res://characters/opponents/student.tscn" id="4_2n7hr"]
+
+[node name="1-1" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_0q7mx")
+
+[node name="PlayerUI" parent="." instance=ExtResource("2_wvmvo")]
+
+[node name="Keys" parent="PlayerUI/TemporaryElements" index="0"]
+offset_top = -10.0
+offset_bottom = 121.0
+
+[node name="Student1" parent="." instance=ExtResource("4_2n7hr")]
+position = Vector2(227, 58)
+opponent_name = "The Grand Sage"
+pregame_dialogue = "Yoo sup my dude"
+
+[node name="Player" parent="." instance=ExtResource("3_qoj6a")]
+position = Vector2(239, 461)
+
+[editable path="PlayerUI"]
