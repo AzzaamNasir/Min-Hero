@@ -10,18 +10,18 @@ z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_0q7mx")
 
+[node name="Student1" parent="." instance=ExtResource("4_2n7hr")]
+position = Vector2(227, 58)
+opponent_name = "The Grand Sage"
+pregame_dialogue = "Yoo isn't that so crazy I can't believe that happened like no way dude it was so unexpected i literally gasped i can't belive that could actually happen"
+
+[node name="Player" parent="." instance=ExtResource("3_qoj6a")]
+position = Vector2(239, 461)
+
 [node name="PlayerUI" parent="." instance=ExtResource("2_wvmvo")]
 
 [node name="Keys" parent="PlayerUI/TemporaryElements" index="0"]
 offset_top = -10.0
 offset_bottom = 121.0
-
-[node name="Student1" parent="." instance=ExtResource("4_2n7hr")]
-position = Vector2(227, 58)
-opponent_name = "The Grand Sage"
-pregame_dialogue = "Yoo sup my dude"
-
-[node name="Player" parent="." instance=ExtResource("3_qoj6a")]
-position = Vector2(239, 461)
 
 [editable path="PlayerUI"]

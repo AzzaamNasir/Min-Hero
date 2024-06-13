@@ -1,10 +1,19 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://ikg53t3xsgjn"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://ikg53t3xsgjn"]
 
 [ext_resource type="Texture2D" uid="uid://gjw4bmpp2rcl" path="res://ui/assets/dialogue/1150_Utilities.SpriteHandler_menus_speechBubble.png" id="1_1e7hn"]
 [ext_resource type="FontFile" uid="uid://rscyjpse26wp" path="res://ui/assets/Burbin Casual NC.ttf" id="2_fxlmf"]
+[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="3_q2abd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_laq7a"]
 texture = ExtResource("1_1e7hn")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_53g5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k5ii4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vs1kr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8iu3a"]
 
 [resource]
 default_font = ExtResource("2_fxlmf")
@@ -13,3 +22,10 @@ HeadingLabel/colors/default_color = Color(0.733005, 0.733005, 0.733005, 1)
 Panel/styles/panel = SubResource("StyleBoxTexture_laq7a")
 RichTextLabel/font_sizes/normal_font_size = 256
 RichTextLabel/fonts/normal_font = ExtResource("2_fxlmf")
+VScrollBar/icons/increment = ExtResource("3_q2abd")
+VScrollBar/icons/increment_highlight = ExtResource("3_q2abd")
+VScrollBar/icons/increment_pressed = ExtResource("3_q2abd")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_53g5l")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_k5ii4")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_vs1kr")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_8iu3a")

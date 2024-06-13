@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://jl5u1eevbiua"]
+[gd_scene load_steps=7 format=3 uid="uid://jl5u1eevbiua"]
 
 [ext_resource type="Script" path="res://characters/opponents/student.gd" id="1_jef57"]
 [ext_resource type="Texture2D" uid="uid://dvw33wx5gv5gm" path="res://characters/opponents/assets/165_Utilities.SpriteHandler_generalRoom_undeadGymEnemy.png" id="1_te6av"]
 [ext_resource type="Theme" uid="uid://ikg53t3xsgjn" path="res://ui/assets/dialogue/dialogue.tres" id="3_371ja"]
+[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="4_15ihr"]
+[ext_resource type="Script" path="res://characters/opponents/dialogue_manager.gd" id="4_ajeof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_406le"]
 size = Vector2(52, 19.75)
@@ -26,15 +28,15 @@ position = Vector2(6, 22.125)
 shape = SubResource("RectangleShape2D_406le")
 
 [node name="DialogueBox" type="Panel" parent="."]
-unique_name_in_owner = true
+visible = false
 offset_left = -193.0
 offset_top = -253.0
 offset_right = 207.0
 offset_bottom = -93.0
 theme = ExtResource("3_371ja")
+script = ExtResource("4_ajeof")
 
 [node name="Name" type="RichTextLabel" parent="DialogueBox"]
-unique_name_in_owner = true
 texture_filter = 4
 layout_mode = 0
 offset_left = 10.0
@@ -54,11 +56,25 @@ text = "[center] The Grand Sage"
 scroll_active = false
 
 [node name="Dialogue" type="RichTextLabel" parent="DialogueBox"]
-unique_name_in_owner = true
 layout_mode = 0
-offset_left = 14.0
-offset_top = 47.0
-offset_right = 4627.0
-offset_bottom = 1335.0
-scale = Vector2(0.08, 0.08)
+offset_left = 12.0
+offset_top = 45.0
+offset_right = 4353.0
+offset_bottom = 1204.0
+scale = Vector2(0.082, 0.082)
+theme = ExtResource("3_371ja")
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="ContinuationIndicator" type="TextureRect" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 135.0
+offset_right = 389.0
+offset_bottom = 152.0
+texture = ExtResource("4_15ihr")
+expand_mode = 1
+stretch_mode = 5

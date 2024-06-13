@@ -1,4 +1,5 @@
 extends Node
+## Data Object, stores the player's data
 
 @export var run_speed := 300
 

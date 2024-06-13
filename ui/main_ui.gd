@@ -23,7 +23,7 @@ func menu_button_pressed():
 	else:
 		animator.fade_in(menu,0.2)
 
-
+## Class containing various animations to be used for animating UI elements
 class AnimationsLibrary:
 	var menu : Panel
 	
@@ -44,6 +44,7 @@ class AnimationsLibrary:
 		var animator : Tween = UIData.get_tree().create_tween()
 		animator.tween_property(node,"modulate:a",0,duration).set_trans(Tween.TRANS_LINEAR)
 		await UIData.get_tree().create_timer(duration).timeout
+		menu.hide()
 
 	func fade_in(node : CanvasItem, duration : float):
 		menu.show()
