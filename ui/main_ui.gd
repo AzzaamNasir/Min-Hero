@@ -43,7 +43,7 @@ class AnimationsLibrary:
 	func fade_out(node : CanvasItem, duration : float):
 		var animator : Tween = UIData.get_tree().create_tween()
 		animator.tween_property(node,"modulate:a",0,duration).set_trans(Tween.TRANS_LINEAR)
-		await UIData.get_tree().create_timer(duration).timeout
+		await animator.finished
 		menu.hide()
 
 	func fade_in(node : CanvasItem, duration : float):

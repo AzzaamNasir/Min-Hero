@@ -1,7 +1,7 @@
 extends Node
 ## Data Object, stores the player's data
 
-@export var run_speed := 300
+@export var run_speed := 450
 
 var player_sprite : SpriteFrames = preload("res://characters/player/assets/male/anim_sprite.tres")
 var unlocked_minions : Array[MinionData]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://dij02i442orwy"]
+
+[ext_resource type="Theme" uid="uid://ikg53t3xsgjn" path="res://ui/assets/dialogue/dialogue.tres" id="1_x3cog"]
+[ext_resource type="Script" path="res://characters/opponents/dialogue_manager.gd" id="2_7406y"]
+[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="3_1pl4e"]
+
+[node name="DialogueBox" type="Panel"]
+offset_left = -200.0
+offset_top = -263.0
+offset_right = 200.0
+offset_bottom = -103.0
+theme = ExtResource("1_x3cog")
+script = ExtResource("2_7406y")
+
+[node name="Name" type="RichTextLabel" parent="."]
+texture_filter = 4
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 1910.0
+offset_bottom = 421.0
+scale = Vector2(0.08, 0.08)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+auto_translate = false
+localize_numeral_system = false
+theme = ExtResource("1_x3cog")
+theme_type_variation = &"HeadingLabel"
+theme_override_font_sizes/normal_font_size = 256
+bbcode_enabled = true
+text = "[center] The Grand Sage"
+scroll_active = false
+
+[node name="Dialogue" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 45.0
+offset_right = 4353.0
+offset_bottom = 1143.0
+scale = Vector2(0.082, 0.082)
+theme = ExtResource("1_x3cog")
+text = "gggdfgdfffffffffffffffffffffffffffffffffffffffffffffffff"
+scroll_active = false
+autowrap_mode = 1
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="ContinuationIndicator" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 135.0
+offset_right = 389.0
+offset_bottom = 152.0
+texture = ExtResource("3_1pl4e")
+expand_mode = 1
+stretch_mode = 5

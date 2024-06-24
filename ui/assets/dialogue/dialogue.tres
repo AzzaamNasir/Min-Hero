@@ -19,6 +19,7 @@ texture = ExtResource("1_1e7hn")
 default_font = ExtResource("2_fxlmf")
 HeadingLabel/base_type = &"RichTextLabel"
 HeadingLabel/colors/default_color = Color(0.733005, 0.733005, 0.733005, 1)
+HeadingLabel/constants/line_separation = 4
 Panel/styles/panel = SubResource("StyleBoxTexture_laq7a")
 RichTextLabel/font_sizes/normal_font_size = 256
 RichTextLabel/fonts/normal_font = ExtResource("2_fxlmf")
