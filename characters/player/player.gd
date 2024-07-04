@@ -10,12 +10,16 @@ var talking = false
 
 func _ready():
 	sprite.sprite_frames = PlayerData.player_sprite
-	TempData.dialogue_complete.connect(func():
+	SignalBus.dialogue_started.connect(func():
+		talking = true
+		)
+	
+	SignalBus.dialogue_complete.connect(func():
 		talking = false
 		)
 
 func _physics_process(delta):
-	
+	#region Moving+Animating player
 	dir = Input.get_vector("key_left","key_right","key_up","key_down") if not talking else Vector2.ZERO
 	velocity = Vector2.ZERO if talking else dir * PlayerData.run_speed 
 	anim_tree.set("parameters/conditions/idle",velocity == Vector2.ZERO)
@@ -26,19 +30,5 @@ func _physics_process(delta):
 		anim_tree.set("parameters/idle/blend_position",dir)
 		UIData.show_keys = false
 		
-	if Input.is_action_just_pressed("interact") and in_interact_range == true:
-		if interactable is Opponent:
-			interactable.dialog_start()
-			talking = true
-		
 	move_and_slide()
-
-func _on_interactable_entered(body: Node2D) -> void:
-	interactable = body
-	in_interact_range = true
-	UIData.show_interact = true
-
-
-func _on_interactable_exited(body: Node2D) -> void:
-	in_interact_range = false
-	UIData.show_interact = false
+	#endregion

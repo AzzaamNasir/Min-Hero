@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv5viyc7da68c"]
+[gd_scene load_steps=10 format=3 uid="uid://bv5viyc7da68c"]
 
 [ext_resource type="Script" path="res://floors/floor_manager.gd" id="1_0q7mx"]
 [ext_resource type="PackedScene" uid="uid://cd28ri7gatabw" path="res://ui/main_ui.tscn" id="2_wvmvo"]
@@ -7,8 +7,18 @@
 [ext_resource type="PackedScene" uid="uid://jl5u1eevbiua" path="res://characters/opponents/student.tscn" id="4_2n7hr"]
 [ext_resource type="Texture2D" uid="uid://bq0jm03hjy8te" path="res://characters/opponents/assets/184_Utilities.SpriteHandler_fireRoom_musclesEnemy_side.png" id="4_mavd8"]
 [ext_resource type="Texture2D" uid="uid://bdipushxqqfk7" path="res://characters/opponents/assets/650_Utilities.SpriteHandler_plantRoom_waterEnemy_side.png" id="5_4y2xh"]
+[ext_resource type="PackedScene" uid="uid://7e83413kd3el" path="res://floors/scenes/1-2.tscn" id="8_t8tx4"]
 
-[node name="1-1" type="Node2D"]
+[sub_resource type="GDScript" id="GDScript_gtikx"]
+script/source = "extends Button
+
+@export var scene : PackedScene
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_packed(scene)
+"
+
+[node name="Level" type="Node2D"]
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_0q7mx")
@@ -17,7 +27,7 @@ script = ExtResource("1_0q7mx")
 position = Vector2(227, 58)
 opponent_name = "The Grand Sage"
 sprite = ExtResource("3_p7pok")
-pregame_dialogue = "My nam is water hartwell white. I liveon radnom street names jsdajf fhsahha hllo dandas nafh jccnj  jaj sjncsancsnv assbf ajdjvbsdnvb adjsdvjvbdsjv"
+pregame_dialogue = "1-1 STUDENT 1 BEFORE LOSING"
 
 [node name="Student2" parent="." instance=ExtResource("4_2n7hr")]
 position = Vector2(-513, 439)
@@ -30,7 +40,7 @@ position = Vector2(1013, 420)
 flip_sprite = true
 opponent_name = "The Grand Sage"
 sprite = ExtResource("5_4y2xh")
-pregame_dialogue = "My nam is water hartwell white. I liveon radnom street names jsdajf fhsahha hllo"
+pregame_dialogue = "My nam is water hartwell white. I liveon radnom street names jsdajf fhsahha hllo brah thaius ibns o9asia akfaskf kjasfnjasf afknadsjkfa akfakdsfn fkafnkasf"
 
 [node name="Player" parent="." instance=ExtResource("3_qoj6a")]
 position = Vector2(239, 461)
@@ -40,5 +50,16 @@ position = Vector2(239, 461)
 [node name="Keys" parent="PlayerUI/TemporaryElements" index="0"]
 offset_top = -10.0
 offset_bottom = 121.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 783.0
+offset_right = 213.0
+offset_bottom = 870.0
+text = "Change Scene"
+script = SubResource("GDScript_gtikx")
+scene = ExtResource("8_t8tx4")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 
 [editable path="PlayerUI"]

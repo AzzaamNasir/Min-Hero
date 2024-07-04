@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://7e83413kd3el"]
+
+[ext_resource type="Script" path="res://floors/floor_manager.gd" id="1_wh80w"]
+[ext_resource type="PackedScene" uid="uid://jl5u1eevbiua" path="res://characters/opponents/student.tscn" id="2_2v120"]
+[ext_resource type="Texture2D" uid="uid://bq0jm03hjy8te" path="res://characters/opponents/assets/184_Utilities.SpriteHandler_fireRoom_musclesEnemy_side.png" id="4_mba4f"]
+[ext_resource type="Texture2D" uid="uid://bdipushxqqfk7" path="res://characters/opponents/assets/650_Utilities.SpriteHandler_plantRoom_waterEnemy_side.png" id="5_xu7hv"]
+[ext_resource type="PackedScene" uid="uid://dh51p6fm3ucua" path="res://characters/player/player.tscn" id="6_ub5wo"]
+[ext_resource type="PackedScene" uid="uid://cd28ri7gatabw" path="res://ui/main_ui.tscn" id="7_u5lfs"]
+
+[node name="1-1" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_wh80w")
+
+[node name="Student2" parent="." instance=ExtResource("2_2v120")]
+position = Vector2(-513, 439)
+opponent_name = "The Grand Sage"
+sprite = ExtResource("4_mba4f")
+pregame_dialogue = "Hey short text also works :D"
+
+[node name="Student3" parent="." instance=ExtResource("2_2v120")]
+position = Vector2(1013, 420)
+flip_sprite = true
+opponent_name = "The Grand Sage"
+sprite = ExtResource("5_xu7hv")
+pregame_dialogue = "My nam is water hartwell white. I liveon radnom street names jsdajf fhsahha hllo"
+
+[node name="Player" parent="." instance=ExtResource("6_ub5wo")]
+position = Vector2(239, 461)
+
+[node name="PlayerUI" parent="." instance=ExtResource("7_u5lfs")]

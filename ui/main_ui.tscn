@@ -229,6 +229,10 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 texture_normal = ExtResource("15_ac4ne")
+texture_pressed = ExtResource("15_ac4ne")
+texture_hover = ExtResource("15_ac4ne")
+texture_disabled = ExtResource("15_ac4ne")
+texture_focused = ExtResource("15_ac4ne")
 ignore_texture_size = true
 stretch_mode = 5
 

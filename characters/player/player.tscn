@@ -1,13 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://dh51p6fm3ucua"]
+[gd_scene load_steps=28 format=3 uid="uid://dh51p6fm3ucua"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_jcit1"]
 [ext_resource type="SpriteFrames" uid="uid://bwvkw48rj2q5f" path="res://characters/player/assets/female/anim_sprite.tres" id="2_gx1bo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q57pn"]
 size = Vector2(51, 12.25)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_vsm1r"]
-radius = 100.0
 
 [sub_resource type="Animation" id="Animation_dnhsp"]
 resource_name = "idle_down"
@@ -416,13 +413,6 @@ frame = 1
 position = Vector2(0.5, 1.875)
 shape = SubResource("RectangleShape2D_q57pn")
 
-[node name="InteractableDetector" type="Area2D" parent="."]
-position = Vector2(0, -12.75)
-collision_mask = 32
-
-[node name="DetectorArea" type="CollisionShape2D" parent="InteractableDetector"]
-shape = SubResource("CircleShape2D_vsm1r")
-
 [node name="Animator" type="AnimationPlayer" parent="."]
 deterministic = true
 libraries = {
@@ -440,6 +430,3 @@ parameters/idle/blend_position = Vector2(0, 0)
 parameters/moving/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[connection signal="body_entered" from="InteractableDetector" to="." method="_on_interactable_entered"]
-[connection signal="body_exited" from="InteractableDetector" to="." method="_on_interactable_exited"]

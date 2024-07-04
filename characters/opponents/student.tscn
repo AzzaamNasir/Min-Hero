@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://jl5u1eevbiua"]
+[gd_scene load_steps=6 format=3 uid="uid://jl5u1eevbiua"]
 
 [ext_resource type="Script" path="res://characters/opponents/student.gd" id="1_jef57"]
 [ext_resource type="Texture2D" uid="uid://bdipushxqqfk7" path="res://characters/opponents/assets/650_Utilities.SpriteHandler_plantRoom_waterEnemy_side.png" id="2_x1b5f"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_406le"]
 size = Vector2(96, 28)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ppmhd"]
+radius = 96.3328
 
 [node name="Student" type="StaticBody2D"]
 z_index = 5
@@ -27,3 +30,11 @@ shape = SubResource("RectangleShape2D_406le")
 
 [node name="DialogueBox" parent="." instance=ExtResource("3_hwhks")]
 visible = false
+
+[node name="Range" type="Area2D" parent="."]
+
+[node name="Area" type="CollisionShape2D" parent="Range"]
+shape = SubResource("CircleShape2D_ppmhd")
+
+[connection signal="body_entered" from="Range" to="." method="_on_range_entered"]
+[connection signal="body_exited" from="Range" to="." method="_on_range_exited"]

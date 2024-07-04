@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnanw4lvkhqdu"]
+
+[ext_resource type="Texture2D" uid="uid://h5qufrdq2hbp" path="res://ui/assets/level_select/992_Utilities.SpriteHandler_roomSelect_background_frontMountains.png" id="1_gpbya"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j87ht"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_176ov"]
+texture = ExtResource("1_gpbya")
+
+[node name="LevelSelect" type="CanvasLayer"]
+
+[node name="Background" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j87ht")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1026.0
+offset_top = -540.0
+offset_right = 1024.0
+offset_bottom = 590.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_176ov")
+
+[node name="Camera2D" type="Camera2D" parent="."]

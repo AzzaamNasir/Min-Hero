@@ -5,20 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="3_1pl4e"]
 
 [node name="DialogueBox" type="Panel"]
-offset_left = -200.0
-offset_top = -263.0
-offset_right = 200.0
-offset_bottom = -103.0
+offset_left = -279.0
+offset_top = -362.0
+offset_right = 281.0
+offset_bottom = -112.0
 theme = ExtResource("1_x3cog")
 script = ExtResource("2_7406y")
 
 [node name="Name" type="RichTextLabel" parent="."]
 texture_filter = 4
 layout_mode = 0
-offset_left = 10.0
-offset_top = 9.0
-offset_right = 1910.0
-offset_bottom = 421.0
+offset_left = 16.0
+offset_top = 22.0
+offset_right = 2741.0
+offset_bottom = 473.0
 scale = Vector2(0.08, 0.08)
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -26,20 +26,21 @@ auto_translate = false
 localize_numeral_system = false
 theme = ExtResource("1_x3cog")
 theme_type_variation = &"HeadingLabel"
-theme_override_font_sizes/normal_font_size = 256
+theme_override_font_sizes/normal_font_size = 300
 bbcode_enabled = true
 text = "[center] The Grand Sage"
 scroll_active = false
 
 [node name="Dialogue" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 12.0
-offset_top = 45.0
-offset_right = 4353.0
-offset_bottom = 1143.0
+offset_left = 19.0
+offset_top = 89.0
+offset_right = 6080.0
+offset_bottom = 1650.0
 scale = Vector2(0.082, 0.082)
 theme = ExtResource("1_x3cog")
-text = "gggdfgdfffffffffffffffffffffffffffffffffffffffffffffffff"
+theme_override_font_sizes/normal_font_size = 320
+text = "gggdfgdfffffffffffffffffffffffffffffffffffffffffffffffffdsssssssssssssssssssssssssssssssssssssssgdfggggggggggggggggg"
 scroll_active = false
 autowrap_mode = 1
 shortcut_keys_enabled = false
@@ -48,10 +49,10 @@ drag_and_drop_selection_enabled = false
 
 [node name="ContinuationIndicator" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 372.0
-offset_top = 135.0
-offset_right = 389.0
-offset_bottom = 152.0
+offset_left = 522.0
+offset_top = 200.0
+offset_right = 539.0
+offset_bottom = 217.0
 texture = ExtResource("3_1pl4e")
 expand_mode = 1
 stretch_mode = 5
