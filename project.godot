@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="HD-Min-Hero"
-run/main_scene="res://floors/scenes/1-1.tscn"
+config/name="Min Hero"
+run/main_scene="res://floors/scenes/1-1/1-1.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 UIData="*res://globals/ui_data.gd"
 PlayerData="*res://globals/player_data.gd"
 SignalBus="*res://globals/signal_bus.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [display]
 
@@ -35,6 +36,10 @@ window/stretch/mode="canvas_items"
 
 movie_writer/mjpeg_quality=1.0
 movie_writer/movie_file="D:/Folders/Videos/Godot/Min-Hero-HD.avi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [gui]
 
