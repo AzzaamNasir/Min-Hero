@@ -14,7 +14,7 @@ var dialogue_count := -1
 func _ready() -> void:
 	modulate.a = 0
 	dialogue.get_v_scroll_bar().allow_greater = true
-	TranslationServer.set_locale("en")
+	TranslationServer.set_locale("de")
 
 # This is where the actual dialogue rendering happens
 func _input(event: InputEvent) -> void:
