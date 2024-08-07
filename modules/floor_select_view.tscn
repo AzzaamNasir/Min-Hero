@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cib8ns8cxgead"]
+
+[ext_resource type="Script" path="res://modules/floor_select_view.gd" id="1_rj7fk"]
+[ext_resource type="Texture2D" uid="uid://dc45arb4ys8c3" path="res://floors/assets/floor_selector/745_Utilities.SpriteHandler_roomSelect_plantRoom.png" id="2_730pt"]
+[ext_resource type="Texture2D" uid="uid://bnd5sfb8jskqu" path="res://floors/assets/floor_selector/436_Utilities.SpriteHandler_roomSelect_towerCovered.png" id="4_k7g0g"]
+[ext_resource type="Texture2D" uid="uid://s7w2ehg5qgxs" path="res://floors/assets/floor_selector/1305_Utilities.SpriteHandler_roomSelect_towerCoveredLock.png" id="5_d4o5r"]
+[ext_resource type="Texture2D" uid="uid://bt7crjulnub75" path="res://floors/assets/floor_selector/170_Utilities.SpriteHandler_roomSelect_roomFont_1.png" id="5_myqld"]
+[ext_resource type="Texture2D" uid="uid://dk4wr6rv0ev8u" path="res://floors/assets/floor_selector/169_Utilities.SpriteHandler_roomSelect_roomFont_2.png" id="6_6n2kv"]
+[ext_resource type="Texture2D" uid="uid://dtl326oom8kva" path="res://floors/assets/floor_selector/125_Utilities.SpriteHandler_roomSelect_roomFont_z.png" id="6_ovoxp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2whv"]
+atlas = ExtResource("2_730pt")
+region = Rect2(5, 7, 194, 97)
+
+[node name="Floor" type="Node2D"]
+scale = Vector2(2.68, 2.68)
+script = ExtResource("1_rj7fk")
+
+[node name="Background" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("AtlasTexture_j2whv")
+
+[node name="Bonus" type="Sprite2D" parent="Background"]
+unique_name_in_owner = true
+
+[node name="Bars" type="Sprite2D" parent="Background"]
+position = Vector2(-3, -4)
+texture = ExtResource("4_k7g0g")
+
+[node name="Lock" type="Sprite2D" parent="Background"]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.977273, 1)
+texture = ExtResource("5_d4o5r")
+
+[node name="Number" type="Node2D" parent="."]
+visible = false
+
+[node name="AreaNumber" type="Sprite2D" parent="Number"]
+unique_name_in_owner = true
+position = Vector2(-45, 0)
+texture = ExtResource("5_myqld")
+
+[node name="Dash" type="Sprite2D" parent="Number"]
+position = Vector2(0, 10)
+texture = ExtResource("6_ovoxp")
+
+[node name="FloorNumber" type="Sprite2D" parent="Number"]
+unique_name_in_owner = true
+position = Vector2(44, 0)
+texture = ExtResource("6_6n2kv")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://cnvupx4cxd5ol"]
+
+[ext_resource type="Script" path="res://moves/moves/move.gd" id="1_hmvdw"]
+[ext_resource type="Texture2D" uid="uid://byjbqvb2nvlp8" path="res://moves/assets/skill_anims/511_Utilities.SpriteHandler_mv_clawNoFur.png" id="2_lq6n3"]
+[ext_resource type="Texture2D" uid="uid://dc2o1pirgmjxu" path="res://moves/assets/skill_icons/135_Utilities.SpriteHandler_moveIcon_claw.png" id="2_rti1c"]
+[ext_resource type="Script" path="res://moves/moves/move_animator.gd" id="3_rnkew"]
+[ext_resource type="Script" path="res://moves/moves/move_anim.gd" id="4_vjmpe"]
+
+[node name="Claw" type="Node2D"]
+script = ExtResource("1_hmvdw")
+ability_name = "Claw"
+texture = ExtResource("2_rti1c")
+element = 2
+
+[node name="Animator" type="Node2D" parent="."]
+script = ExtResource("3_rnkew")
+
+[node name="MoveAnim" type="Node2D" parent="Animator"]
+script = ExtResource("4_vjmpe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Animator/MoveAnim"]
+texture = ExtResource("2_lq6n3")

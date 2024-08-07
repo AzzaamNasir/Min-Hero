@@ -21,14 +21,12 @@ UIData="*res://globals/ui_data.gd"
 PlayerData="*res://globals/player_data.gd"
 SignalBus="*res://globals/signal_bus.gd"
 DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
-LevelManager="*res://addons/gle2d/components/LevelManager.gd"
+Databases="*res://globals/databases.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
-window/size/always_on_top=true
 window/size/window_width_override=640
 window/size/window_height_override=360
 window/stretch/mode="canvas_items"
@@ -42,8 +40,13 @@ movie_writer/movie_file="D:/Folders/Videos/Godot/Min-Hero-HD.avi"
 
 enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [gui]
 
+common/snap_controls_to_pixels=false
 fonts/dynamic_fonts/use_oversampling=false
 theme/custom_font="res://ui/assets/Burbin Casual NC.ttf"
 
@@ -83,6 +86,10 @@ interact={
 [internationalization]
 
 locale/translations=PackedStringArray("res://globals/translations/translations.en.translation", "res://globals/translations/translations.de.translation")
+
+[network]
+
+limits/debugger/max_chars_per_second=100000
 
 [rendering]
 

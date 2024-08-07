@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp8c41h33j6hc"]
+
+[ext_resource type="Script" path="res://battle_scene/battle_arena.gd" id="1_er6ym"]
+
+[node name="BattleArena" type="Node2D"]
+script = ExtResource("1_er6ym")
+
+[node name="Team1" type="Node2D" parent="."]
+
+[node name="1" type="Marker2D" parent="Team1"]
+
+[node name="Team2" type="Node2D" parent="."]
