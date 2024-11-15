@@ -5,7 +5,4 @@ extends Node2D
 @export var characters : Array
 
 func _ready() -> void:
-	DiscordRPC.app_id = 1258685490937462826
-	DiscordRPC.details = "Godot Version"
-	DiscordRPC.large_image = "grassseal"
-	DiscordRPC.refresh()
+	pass

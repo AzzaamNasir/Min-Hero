@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://duucm5ku13sbd"]
+[gd_scene load_steps=6 format=3 uid="uid://08rnlo7ud1nl"]
 
 [ext_resource type="PackedScene" uid="uid://cib8ns8cxgead" path="res://modules/floor_select_view.tscn" id="1_6x8od"]
-[ext_resource type="Texture2D" uid="uid://bvhq6i0oto7aq" path="res://floors/assets/floor_selector/992_Utilities.SpriteHandler_roomSelect_background_frontMountains.png" id="1_68nc5"]
-[ext_resource type="Texture2D" uid="uid://bvic5pr0uch1s" path="res://floors/assets/floor_selector/101_Utilities.SpriteHandler_roomSelect_electricRoom.png" id="2_mpedt"]
-[ext_resource type="Texture2D" uid="uid://dmnwa3mhcldnf" path="res://floors/assets/floor_selector/164_Utilities.SpriteHandler_roomSelect_roomFont_3.png" id="3_jt0as"]
-[ext_resource type="Texture2D" uid="uid://l8exyj0hqywt" path="res://floors/assets/floor_selector/163_Utilities.SpriteHandler_roomSelect_roomFont_4.png" id="4_n6jgp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ay2qp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dgbpc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s03wy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v0jre"]
 
 [node name="FloorSelector" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-281.0]
@@ -17,28 +21,28 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_68nc5")
+texture = SubResource("CompressedTexture2D_ay2qp")
 
 [node name="Floor" parent="." instance=ExtResource("1_6x8od")]
 position = Vector2(591, 707)
-background_sprite = ExtResource("2_mpedt")
-area_num_sprite = ExtResource("3_jt0as")
-floor_num_sprite = ExtResource("4_n6jgp")
+background_sprite = SubResource("CompressedTexture2D_dgbpc")
+area_num_sprite = SubResource("CompressedTexture2D_s03wy")
+floor_num_sprite = SubResource("CompressedTexture2D_v0jre")
 
 [node name="Floor2" parent="." instance=ExtResource("1_6x8od")]
 position = Vector2(591, 452)
-background_sprite = ExtResource("2_mpedt")
-area_num_sprite = ExtResource("3_jt0as")
-floor_num_sprite = ExtResource("4_n6jgp")
+background_sprite = SubResource("CompressedTexture2D_dgbpc")
+area_num_sprite = SubResource("CompressedTexture2D_s03wy")
+floor_num_sprite = SubResource("CompressedTexture2D_v0jre")
 
 [node name="Floor3" parent="." instance=ExtResource("1_6x8od")]
 position = Vector2(591, 195)
-background_sprite = ExtResource("2_mpedt")
-area_num_sprite = ExtResource("3_jt0as")
-floor_num_sprite = ExtResource("4_n6jgp")
+background_sprite = SubResource("CompressedTexture2D_dgbpc")
+area_num_sprite = SubResource("CompressedTexture2D_s03wy")
+floor_num_sprite = SubResource("CompressedTexture2D_v0jre")
 
 [node name="Floor4" parent="." instance=ExtResource("1_6x8od")]
 position = Vector2(591, -58)
-background_sprite = ExtResource("2_mpedt")
-area_num_sprite = ExtResource("3_jt0as")
-floor_num_sprite = ExtResource("4_n6jgp")
+background_sprite = SubResource("CompressedTexture2D_dgbpc")
+area_num_sprite = SubResource("CompressedTexture2D_s03wy")
+floor_num_sprite = SubResource("CompressedTexture2D_v0jre")

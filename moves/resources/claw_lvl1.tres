@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3 uid="uid://c6kf2atqmitb8"]
+
+[ext_resource type="Script" path="res://moves/move_effects/move_effects.gd" id="1_5rdjy"]
+[ext_resource type="Script" path="res://moves/move_effects/enemy_damage.gd" id="2_mrbp5"]
+[ext_resource type="Script" path="res://moves/move_data.gd" id="2_mtpg8"]
+[ext_resource type="Texture2D" uid="uid://dc2o1pirgmjxu" path="res://moves/assets/skill_icons/claw.png" id="3_xldxd"]
+
+[sub_resource type="Resource" id="Resource_48pkq"]
+script = ExtResource("2_mrbp5")
+damage = 10.0
+target_no = 1
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("2_mtpg8")
+ability_name = "Claw"
+move_class = 18
+texture = ExtResource("3_xldxd")
+energy = 5
+element = 2
+effects = Array[ExtResource("1_5rdjy")]([SubResource("Resource_48pkq")])
+target = 0
+target_no = 1

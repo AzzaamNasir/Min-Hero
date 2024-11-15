@@ -1,15 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1vp5f8rll8j"]
+[gd_scene load_steps=9 format=3 uid="uid://c1vp5f8rll8j"]
 
 [ext_resource type="Script" path="res://minions/minion.gd" id="1_em0cu"]
-[ext_resource type="PackedScene" uid="uid://c6rsutvk4gdn2" path="res://ui/skill_tree/skill_tree.tscn" id="2_44kx2"]
+[ext_resource type="PackedScene" uid="uid://c6rsutvk4gdn2" path="res://ui/battle/skill_tree.tscn" id="2_44kx2"]
 [ext_resource type="Resource" uid="uid://dy50p1xlk6lyu" path="res://minions/minion_data/ticub.tres" id="2_qlro5"]
+[ext_resource type="PackedScene" uid="uid://cnvupx4cxd5ol" path="res://moves/moves/claw_lvl1.tscn" id="3_6l2ng"]
+[ext_resource type="PackedScene" uid="uid://gwkc83yiivw7" path="res://ui/battle/move_menu.tscn" id="4_qgpv6"]
+[ext_resource type="Texture2D" uid="uid://iufnynrxknf1" path="res://minions/assets/betestone.png" id="4_udi6s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3whci"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0gnd"]
 
 [node name="Ticub" type="Node2D"]
+material = SubResource("CanvasItemMaterial_3whci")
 script = ExtResource("1_em0cu")
 minion_data = ExtResource("2_qlro5")
+available_skills = Array[PackedScene]([ExtResource("3_6l2ng")])
 
 [node name="Sprite" type="Sprite2D" parent="."]
+use_parent_material = true
+scale = Vector2(2, 2)
+texture = ExtResource("4_udi6s")
 
-[node name="SkillTree" parent="." instance=ExtResource("2_44kx2")]
+[node name="Specialty1" parent="." instance=ExtResource("2_44kx2")]
 visible = false
+use_parent_material = true
 speciality = "Speed"
+
+[node name="Specialty2" parent="." instance=ExtResource("2_44kx2")]
+visible = false
+use_parent_material = true
+speciality = "Speed"
+
+[node name="Specialty3" parent="." instance=ExtResource("2_44kx2")]
+visible = false
+use_parent_material = true
+speciality = "Speed"
+
+[node name="MoveMenu" parent="." instance=ExtResource("4_qgpv6")]
+visible = false
+z_index = 10
+use_parent_material = true
+
+[node name="Selector" type="Area2D" parent="."]
+modulate = Color(0.726223, 3.41728e-06, 5.77569e-07, 1)
+use_parent_material = true
+monitoring = false
+
+[node name="SelectableArea" type="CollisionShape2D" parent="Selector"]
+shape = SubResource("RectangleShape2D_o0gnd")

@@ -7,12 +7,8 @@ extends Node2D
 @export var bonus_sprite : Texture2D
 
 
-
 func _ready() -> void:
-	var bg_texture = AtlasTexture.new()
-	bg_texture.atlas = background_sprite
-	bg_texture.region = Rect2(5,7,194,97) 
-	%Background.texture = bg_texture
+	%Background.texture = background_sprite
 	if is_bonus:
 		%Bonus.texture = bonus_sprite 
 	%AreaNumber.texture = area_num_sprite

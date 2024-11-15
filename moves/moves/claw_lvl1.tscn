@@ -1,36 +1,34 @@
 [gd_scene load_steps=7 format=3 uid="uid://cnvupx4cxd5ol"]
 
 [ext_resource type="Script" path="res://moves/move.gd" id="1_owjmr"]
-[ext_resource type="Texture2D" uid="uid://dc2o1pirgmjxu" path="res://moves/assets/skill_icons/135_Utilities.SpriteHandler_moveIcon_claw.png" id="2_yyvrt"]
-[ext_resource type="Script" path="res://moves/move_animator.gd" id="3_6nxfm"]
+[ext_resource type="Resource" uid="uid://c6kf2atqmitb8" path="res://moves/resources/claw_lvl1.tres" id="2_4yfo3"]
 [ext_resource type="Script" path="res://moves/move_anim.gd" id="4_0x60e"]
-[ext_resource type="Texture2D" uid="uid://vy1vko3l1xjx" path="res://moves/assets/skill_anims/178_Utilities.SpriteHandler_mv_fang.png" id="5_e1t56"]
+[ext_resource type="Texture2D" uid="uid://byjbqvb2nvlp8" path="res://moves/assets/skill_anims/claw.png" id="5_jg5e8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vhd4"]
+light_mode = 1
 
 [sub_resource type="Curve" id="Curve_d6dwf"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 1.4, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 2.20599, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 metadata/_snap_enabled = true
 
 [node name="Claw" type="Node2D"]
-position = Vector2(513, 428)
+material = SubResource("CanvasItemMaterial_2vhd4")
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_owjmr")
-ability_name = "Claw lvl 1"
-move_class = 15
-texture = ExtResource("2_yyvrt")
-element = 2
+move_data = ExtResource("2_4yfo3")
+sequential_anim = false
 
-[node name="Animator" type="Node2D" parent="." node_paths=PackedStringArray("animations")]
-script = ExtResource("3_6nxfm")
-animations = [NodePath("MoveAnim2")]
-
-[node name="MoveAnim2" type="Node2D" parent="Animator" node_paths=PackedStringArray("assets")]
+[node name="MoveAnim" type="Node2D" parent="."]
+use_parent_material = true
 script = ExtResource("4_0x60e")
-select_animation = 4
+select_animation = 2
 motion_curve = SubResource("Curve_d6dwf")
-assets = NodePath(".")
-anim_time = 1.0
-final_val = 1.0
-asset_idx = Array[int]([0])
+anim_time = 0.5
+final_val = 90.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Animator/MoveAnim2"]
-texture = ExtResource("5_e1t56")
+[node name="Sprite2D" type="Sprite2D" parent="MoveAnim"]
+use_parent_material = true
+rotation = -1.0472
+texture = ExtResource("5_jg5e8")

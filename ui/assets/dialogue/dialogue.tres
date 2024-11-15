@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://ikg53t3xsgjn"]
 
-[ext_resource type="Texture2D" uid="uid://gjw4bmpp2rcl" path="res://ui/assets/dialogue/1150_Utilities.SpriteHandler_menus_speechBubble.png" id="1_1e7hn"]
+[ext_resource type="Texture2D" uid="uid://gjw4bmpp2rcl" path="res://ui/assets/dialogue/dialogue_box.png" id="1_1e7hn"]
 [ext_resource type="FontFile" uid="uid://rscyjpse26wp" path="res://ui/assets/Burbin Casual NC.ttf" id="2_fxlmf"]
-[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="3_q2abd"]
+[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/down_arrow.png" id="3_q2abd"]
 
 [sub_resource type="FontVariation" id="FontVariation_uxu7h"]
 base_font = ExtResource("2_fxlmf")

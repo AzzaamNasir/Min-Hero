@@ -1,12 +1,266 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp8c41h33j6hc"]
+[gd_scene load_steps=13 format=3 uid="uid://bp8c41h33j6hc"]
 
 [ext_resource type="Script" path="res://battle_scene/battle_arena.gd" id="1_er6ym"]
+[ext_resource type="Texture2D" uid="uid://bqhyi64hc6bu8" path="res://battle_scene/assets/clouds.png" id="2_2y37x"]
+[ext_resource type="PackedScene" uid="uid://c1vp5f8rll8j" path="res://minions/minions/ticub.tscn" id="2_6g8wq"]
+[ext_resource type="Texture2D" uid="uid://bdilyua1jse5o" path="res://battle_scene/assets/sky.png" id="2_e50ik"]
+[ext_resource type="Texture2D" uid="uid://b4aag832161g7" path="res://battle_scene/assets/background_horizon.png" id="2_u44rj"]
+[ext_resource type="Texture2D" uid="uid://cne0mepqfcwub" path="res://battle_scene/assets/battle_island.png" id="3_3lr8y"]
+[ext_resource type="Texture2D" uid="uid://c7rjc6m8ysd8u" path="res://battle_scene/assets/background_mountain.png" id="5_j1n75"]
+[ext_resource type="Script" path="res://battle_scene/background_scroller.gd" id="5_ycga2"]
+[ext_resource type="Script" path="res://battle_scene/bg_element.gd" id="7_800ir"]
+[ext_resource type="Texture2D" uid="uid://ce5ei3eyap3nc" path="res://battle_scene/assets/lantern_glow.png" id="7_jxrms"]
+[ext_resource type="Texture2D" uid="uid://d2ge6pw2rqi6q" path="res://battle_scene/assets/background_city.png" id="9_ge7ie"]
+[ext_resource type="Texture2D" uid="uid://b8xi6hgd5ixi0" path="res://battle_scene/assets/rock.png" id="11_82f2b"]
 
 [node name="BattleArena" type="Node2D"]
 script = ExtResource("1_er6ym")
+allies = Array[PackedScene]([ExtResource("2_6g8wq"), ExtResource("2_6g8wq"), ExtResource("2_6g8wq")])
+enemies = Array[PackedScene]([ExtResource("2_6g8wq"), ExtResource("2_6g8wq"), ExtResource("2_6g8wq")])
 
-[node name="Team1" type="Node2D" parent="."]
+[node name="Allies" type="Node2D" parent="."]
+z_index = 10
 
-[node name="1" type="Marker2D" parent="Team1"]
+[node name="1" type="Marker2D" parent="Allies"]
+position = Vector2(843, 541)
+metadata/_edit_lock_ = true
 
-[node name="Team2" type="Node2D" parent="."]
+[node name="2" type="Marker2D" parent="Allies"]
+position = Vector2(663, 695)
+metadata/_edit_lock_ = true
+
+[node name="3" type="Marker2D" parent="Allies"]
+position = Vector2(843, 924)
+metadata/_edit_lock_ = true
+
+[node name="4" type="Marker2D" parent="Allies"]
+z_index = -1
+position = Vector2(459, 500)
+metadata/_edit_lock_ = true
+
+[node name="5" type="Marker2D" parent="Allies"]
+position = Vector2(400, 851)
+metadata/_edit_lock_ = true
+
+[node name="Enemies" type="Node2D" parent="."]
+z_index = 10
+
+[node name="1" type="Marker2D" parent="Enemies"]
+position = Vector2(1109, 541)
+metadata/_edit_lock_ = true
+
+[node name="2" type="Marker2D" parent="Enemies"]
+position = Vector2(1327, 695)
+metadata/_edit_lock_ = true
+
+[node name="3" type="Marker2D" parent="Enemies"]
+position = Vector2(1106, 924)
+metadata/_edit_lock_ = true
+
+[node name="4" type="Marker2D" parent="Enemies"]
+position = Vector2(1439, 512)
+metadata/_edit_lock_ = true
+
+[node name="5" type="Marker2D" parent="Enemies"]
+position = Vector2(1500, 882)
+metadata/_edit_lock_ = true
+
+[node name="Stage" type="Sprite2D" parent="."]
+z_index = 5
+z_as_relative = false
+position = Vector2(967, 658)
+scale = Vector2(2, 2)
+texture = ExtResource("3_3lr8y")
+metadata/_edit_lock_ = true
+
+[node name="Lights" type="Sprite2D" parent="Stage"]
+position = Vector2(4.03628, -117.964)
+texture = ExtResource("7_jxrms")
+
+[node name="Horizon" type="Sprite2D" parent="."]
+z_index = 1
+z_as_relative = false
+texture_repeat = 2
+position = Vector2(957.5, 1071)
+scale = Vector2(2.63519, 2.5)
+texture = ExtResource("2_u44rj")
+region_enabled = true
+region_rect = Rect2(5.5, 0, 773.5, 124)
+metadata/_edit_lock_ = true
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(-95, -128)
+scale = Vector2(3, 3)
+texture = ExtResource("2_e50ik")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Node2D" parent="."]
+scale = Vector2(3, 3)
+script = ExtResource("5_ycga2")
+speed = 5.0
+
+[node name="Cloud2" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(580.667, -58.6667)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 50.0
+metadata/_edit_lock_ = true
+
+[node name="Cloud6" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(1120, 75.6667)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 40.0
+speed_scale = 2.0
+metadata/_edit_lock_ = true
+
+[node name="Cloud11" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.75)
+position = Vector2(872, 41.6667)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 40.0
+speed_scale = 0.75
+metadata/_edit_lock_ = true
+
+[node name="Cloud10" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.75)
+position = Vector2(2017.33, 179.333)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 50.0
+speed_scale = 1.75
+metadata/_edit_lock_ = true
+
+[node name="Cloud5" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(-5.33333, -11)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 10.0
+speed_scale = 1.25
+metadata/_edit_lock_ = true
+
+[node name="Cloud3" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.25)
+position = Vector2(278.333, 10)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 5.0
+metadata/_edit_lock_ = true
+
+[node name="Castle" type="Sprite2D" parent="Background"]
+position = Vector2(-139, -134)
+texture = ExtResource("5_j1n75")
+centered = false
+script = ExtResource("7_800ir")
+gap = 300.0
+speed_scale = 0.25
+metadata/_edit_lock_ = true
+
+[node name="Cloud7" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.75)
+position = Vector2(1640, 16)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 50.0
+speed_scale = 1.75
+metadata/_edit_lock_ = true
+
+[node name="Cloud4" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(279.333, -0.666666)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 25.0
+speed_scale = 0.9
+metadata/_edit_lock_ = true
+
+[node name="GoldenBuilding" type="Sprite2D" parent="Background"]
+position = Vector2(541, 58)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_ge7ie")
+centered = false
+script = ExtResource("7_800ir")
+gap = 50.0
+speed_scale = 0.6
+metadata/_edit_lock_ = true
+
+[node name="Cloud8" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(-146.333, 12)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 25.0
+metadata/_edit_lock_ = true
+
+[node name="Cloud9" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(239.667, 89)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 50.0
+metadata/_edit_lock_ = true
+
+[node name="Cloud" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(-90.3333, -111)
+scale = Vector2(2, 2)
+texture = ExtResource("2_2y37x")
+centered = false
+script = ExtResource("7_800ir")
+gap = 150.0
+speed_scale = 1.5
+metadata/_edit_lock_ = true
+
+[node name="Rock" type="Sprite2D" parent="Background"]
+position = Vector2(266.333, 100)
+texture = ExtResource("11_82f2b")
+centered = false
+script = ExtResource("7_800ir")
+gap = 2500.0
+speed_scale = 3.0
+metadata/_edit_lock_ = true
+
+[node name="Rock2" type="Sprite2D" parent="Background"]
+position = Vector2(793.667, 1)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_82f2b")
+centered = false
+script = ExtResource("7_800ir")
+gap = 150.0
+speed_scale = 0.92
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.340339, 0.340339, 0.340339, 1)

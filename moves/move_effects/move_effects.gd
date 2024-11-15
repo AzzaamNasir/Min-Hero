@@ -1,17 +1,4 @@
-extends Resource
-class_name MoveEffects
-
-enum Type{
-	DAMAGES,
-	HEALS,
-	BUFFS,
-	DEBUFFS,
-}
-
-enum Targets{
-	ENEMIES,
-	ALLIES,
-}
+class_name MoveEffects extends Resource
 
 enum Selector{
 	PLAYER,
@@ -20,13 +7,7 @@ enum Selector{
 	SELF,
 }
 
-@export var type : Type
+signal effect_applied
 
-var target_type : Targets
-var target_selector : Selector
-var target_no : int
-
-var value : int
-var bonus_value : int
-
-@export var anim_idx : int = -1
+func apply_effect():
+	pass

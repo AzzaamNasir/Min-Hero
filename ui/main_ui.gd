@@ -50,5 +50,3 @@ class AnimationsLibrary:
 		menu.show()
 		var animator : Tween = UIData.get_tree().create_tween()
 		animator.tween_property(node,"modulate:a",1,duration).set_trans(Tween.TRANS_LINEAR)
-
-

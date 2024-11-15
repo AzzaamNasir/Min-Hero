@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://ikg53t3xsgjn" path="res://ui/assets/dialogue/dialogue.tres" id="1_x3cog"]
 [ext_resource type="Script" path="res://characters/opponents/dialogue_manager.gd" id="2_7406y"]
-[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/146_Utilities.SpriteHandler_minionPedia_downArrow.png" id="3_1pl4e"]
+[ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/down_arrow.png" id="3_1pl4e"]
 
 [node name="DialogueBox" type="Panel"]
 offset_left = -279.0

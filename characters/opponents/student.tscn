@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://jl5u1eevbiua"]
 
 [ext_resource type="Script" path="res://characters/opponents/student.gd" id="1_jef57"]
-[ext_resource type="Texture2D" uid="uid://bdipushxqqfk7" path="res://characters/opponents/assets/650_Utilities.SpriteHandler_plantRoom_waterEnemy_side.png" id="2_x1b5f"]
+[ext_resource type="Texture2D" uid="uid://bdipushxqqfk7" path="res://characters/opponents/assets/water.png" id="2_x1b5f"]
 [ext_resource type="PackedScene" uid="uid://dij02i442orwy" path="res://modules/dialogue_box.tscn" id="3_hwhks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_406le"]

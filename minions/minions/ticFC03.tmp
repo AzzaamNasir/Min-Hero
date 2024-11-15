@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1vp5f8rll8j"]
+
+[ext_resource type="Script" path="res://minions/minion.gd" id="1_em0cu"]
+[ext_resource type="PackedScene" uid="uid://c6rsutvk4gdn2" path="res://ui/battle/skill_tree.tscn" id="2_44kx2"]
+[ext_resource type="Resource" uid="uid://dy50p1xlk6lyu" path="res://minions/minion_data/ticub.tres" id="2_qlro5"]
+[ext_resource type="PackedScene" uid="uid://cnvupx4cxd5ol" path="res://moves/moves/claw_lvl1.tscn" id="3_6l2ng"]
+[ext_resource type="PackedScene" uid="uid://gwkc83yiivw7" path="res://ui/battle/move_menu.tscn" id="4_qgpv6"]
+
+[node name="Ticub" type="Node2D"]
+script = ExtResource("1_em0cu")
+minion_data = ExtResource("2_qlro5")
+available_skills = Array[PackedScene]([ExtResource("3_6l2ng")])
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Specialty1" parent="." instance=ExtResource("2_44kx2")]
+visible = false
+speciality = "Speed"
+
+[node name="Specialty2" parent="." instance=ExtResource("2_44kx2")]
+visible = false
+speciality = "Speed"
+
+[node name="Specialty3" parent="." instance=ExtResource("2_44kx2")]
+visible = false
+speciality = "Speed"
+
+[node name="MoveMenu" parent="." instance=ExtResource("4_qgpv6")]
