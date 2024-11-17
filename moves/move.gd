@@ -7,6 +7,9 @@ signal move_actually_finished # This signals when the sprite can be removed
 @export var move_data: MoveData
 @export var sequential_anim := true
 
+@export_category("Move Animation")
+@export var animation: Array[MoveAnim]
+
 var completion_status := 0:
 	set(value):
 		if value == 3:
@@ -15,8 +18,8 @@ var completion_status := 0:
 		completion_status = value
 
 func _ready() -> void:
-	play()
 	move_finished.connect(func(): completion_status += 1)
+	play()
 	
 
 func _do_move():
@@ -28,11 +31,8 @@ func _do_move():
 
 
 func play():
-	for idx in get_child_count():
-		var anim: MoveAnim = get_child(idx)
-		anim.play_anim()
+	for anim: MoveAnim in animation:
+		anim.setup(self)
+		anim._play(create_tween())
 		if sequential_anim:
 			await anim.event_triggered
-	
-	_do_move()
-	move_finished.emit()

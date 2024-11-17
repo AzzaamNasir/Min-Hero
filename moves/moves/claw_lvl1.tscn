@@ -1,34 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnvupx4cxd5ol"]
+[gd_scene load_steps=8 format=3 uid="uid://cnvupx4cxd5ol"]
 
 [ext_resource type="Script" path="res://moves/move.gd" id="1_owjmr"]
 [ext_resource type="Resource" uid="uid://c6kf2atqmitb8" path="res://moves/resources/claw_lvl1.tres" id="2_4yfo3"]
-[ext_resource type="Script" path="res://moves/move_anim.gd" id="4_0x60e"]
+[ext_resource type="Script" path="res://moves/move_anims/move_anim.gd" id="4_0x60e"]
+[ext_resource type="Script" path="res://moves/move_anims/slide_anim.gd" id="4_l1k58"]
 [ext_resource type="Texture2D" uid="uid://byjbqvb2nvlp8" path="res://moves/assets/skill_anims/claw.png" id="5_jg5e8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vhd4"]
 light_mode = 1
 
-[sub_resource type="Curve" id="Curve_d6dwf"]
-_data = [Vector2(0, 0), 0.0, 2.20599, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-metadata/_snap_enabled = true
+[sub_resource type="Resource" id="Resource_ro840"]
+script = ExtResource("4_l1k58")
+slide_type = 0
+slide_amount = 500.0
+asset_idx = 0
+enabled = true
+sequential = false
+duration = 2.0
 
 [node name="Claw" type="Node2D"]
 material = SubResource("CanvasItemMaterial_2vhd4")
-scale = Vector2(2.5, 2.5)
 script = ExtResource("1_owjmr")
 move_data = ExtResource("2_4yfo3")
 sequential_anim = false
+animation = Array[ExtResource("4_0x60e")]([SubResource("Resource_ro840")])
 
-[node name="MoveAnim" type="Node2D" parent="."]
-use_parent_material = true
-script = ExtResource("4_0x60e")
-select_animation = 2
-motion_curve = SubResource("Curve_d6dwf")
-anim_time = 0.5
-final_val = 90.0
-
-[node name="Sprite2D" type="Sprite2D" parent="MoveAnim"]
-use_parent_material = true
-rotation = -1.0472
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(557, 378)
 texture = ExtResource("5_jg5e8")
