@@ -1,43 +1,47 @@
-extends Node2D
+class_name BattleArena extends Node2D
+## Static functions will act as global functions, accesible by all scripts(mainly minions)
 
-# Arrays containing each team's minions(Temporary, will shift to autoload)
-@export var allies: Array[PackedScene]
-@export var enemies: Array[PackedScene]
+
+# Arrays containing each team's minions(For testing)
+@export var allies_exp: Array[PackedScene]
+@export var enemies_exp: Array[PackedScene]
 
 @onready var select_filter: CanvasModulate = $CanvasModulate
 
+@onready var bm: BattleManager = $"/root/BattleManager"
+@onready var move_layer: CanvasLayer = $MoveLayer
+
 func _ready() -> void:
-	await ready_minions() 
-	BattleManager.turn_started.connect(func(): select_filter.show())
-	BattleManager.selection_finished.connect(func(): select_filter.hide())
-	BattleManager.next_turn()
+	bm.arena = self
+	_ready_minions()
+	bm.next_turn()
 
 ## Instantiate minions
-func ready_minions():
-	for idx in range(allies.size()):
-		var minion: Minion = allies[idx].instantiate()
+func _ready_minions():
+	for idx in range(allies_exp.size()):
+		var minion: Minion = allies_exp[idx].instantiate()
 		minion.get_node("Sprite").flip_h = true
 		minion.add_to_group("allies")
-		BattleManager.allies.append(minion)
-		BattleManager.turn_order.append(minion)
+		bm.allies.append(minion)
+		bm.turn_order.append(minion)
 		(get_node("Allies/" + str(idx + 1))).add_child(minion)
 	
-	for idx in range(enemies.size()):
-		var minion: Minion = enemies[idx].instantiate()
+	for idx in range(enemies_exp.size()):
+		var minion: Minion = enemies_exp[idx].instantiate()
 		minion.add_to_group("enemies")
-		BattleManager.turn_order.append(minion)
-		BattleManager.enemies.append(minion)
+		bm.turn_order.append(minion)
+		bm.enemies.append(minion)
 		(get_node("Enemies/" + str(idx + 1))).add_child(minion)
 	
 	# Arranging minions with respect to speed through bubble sort
-	for i in range(BattleManager.turn_order.size()):
+	for i in range(bm.turn_order.size()):
 		var swapped = false
 		
-		for j in range(BattleManager.turn_order.size() - i - 1):
-			if BattleManager.turn_order[j].minion_data.speed < BattleManager.turn_order[j + 1].minion_data.speed:
-				var temp = BattleManager.turn_order[j]
-				BattleManager.turn_order[j] = BattleManager.turn_order[j+1]
-				BattleManager.turn_order[j+1] = temp
+		for j in range(bm.turn_order.size() - i - 1):
+			if bm.turn_order[j].minion_data.speed < bm.turn_order[j + 1].minion_data.speed:
+				var temp = bm.turn_order[j]
+				bm.turn_order[j] = bm.turn_order[j+1]
+				bm.turn_order[j+1] = temp
 				swapped = true
 		
 		if not swapped:

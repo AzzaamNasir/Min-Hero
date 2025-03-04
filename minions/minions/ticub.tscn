@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1vp5f8rll8j"]
+[gd_scene load_steps=10 format=3 uid="uid://c1vp5f8rll8j"]
 
 [ext_resource type="Script" path="res://minions/minion.gd" id="1_em0cu"]
 [ext_resource type="PackedScene" uid="uid://c6rsutvk4gdn2" path="res://ui/battle/skill_tree.tscn" id="2_44kx2"]
@@ -11,6 +11,9 @@
 resource_local_to_scene = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0gnd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oiw2c"]
+bg_color = Color(0.41598, 0.41598, 0.41598, 1)
 
 [node name="Ticub" type="Node2D"]
 material = SubResource("CanvasItemMaterial_3whci")
@@ -50,3 +53,10 @@ monitoring = false
 
 [node name="SelectableArea" type="CollisionShape2D" parent="Selector"]
 shape = SubResource("RectangleShape2D_o0gnd")
+
+[node name="Debug" type="Label" parent="."]
+visible = false
+z_index = 100
+offset_right = 40.0
+offset_bottom = 22.6667
+theme_override_styles/normal = SubResource("StyleBoxFlat_oiw2c")

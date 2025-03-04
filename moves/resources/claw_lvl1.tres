@@ -5,19 +5,17 @@
 [ext_resource type="Script" path="res://moves/move_data.gd" id="2_mtpg8"]
 [ext_resource type="Texture2D" uid="uid://dc2o1pirgmjxu" path="res://moves/assets/skill_icons/claw.png" id="3_xldxd"]
 
-[sub_resource type="Resource" id="Resource_48pkq"]
+[sub_resource type="Resource" id="Resource_peact"]
 script = ExtResource("2_mrbp5")
-damage = 10.0
-target_no = 1
+damage = 50.0
+add_animation = true
+anim_idx = 0
 
 [resource]
-resource_local_to_scene = true
 script = ExtResource("2_mtpg8")
 ability_name = "Claw"
 move_class = 18
 texture = ExtResource("3_xldxd")
 energy = 5
 element = 2
-effects = Array[ExtResource("1_5rdjy")]([SubResource("Resource_48pkq")])
-target = 0
-target_no = 1
+effects = Array[ExtResource("1_5rdjy")]([SubResource("Resource_peact")])

@@ -7,5 +7,6 @@ class_name MoveData
 @export var energy : int
 @export var element: Databases.MoveTypes
 @export var effects : Array[MoveEffects]
-@export var target: Databases.Targets
-@export var target_no: int = 1
+
+func _init() -> void:
+	resource_local_to_scene = true

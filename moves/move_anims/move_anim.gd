@@ -1,11 +1,19 @@
 class_name MoveAnim extends Resource
 
-@export var enabled := true
+signal anim_ended
+
+var owner: Node2D
+
+@export var anim_end := true
 @export var sequential := false
 @export var duration := 2.0
+@export var asset_idx := 0
 
-func setup(owner: Node2D):
-	pass
+func _init() -> void:
+	resource_local_to_scene = true
 
-func _play(_tween: Tween):
+func setup(node_owner: Node2D):
+	owner = node_owner
+
+func play(_tween: Tween):
 	pass

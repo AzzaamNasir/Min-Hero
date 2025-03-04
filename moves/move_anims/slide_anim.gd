@@ -12,11 +12,14 @@ func setup(owner: Node2D):
 	elif slide_type == 0:
 		initial_position = asset.position.y
 
-func _play(tween: Tween):
+func play(tween: Tween):
 	if slide_type == 0:
 		tween.tween_method(_slide_horizontal, 0.0, 1.0, duration)
 	elif slide_type == 1:
 		tween.tween_method(_slide_vertical, 0.0, 1.0, duration)
+	
+	await tween.finished
+	anim_ended.emit()
 
 func _slide_vertical(time: float):
 	asset.position.y = initial_position - _sample_curve(time, slide_amount)

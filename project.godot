@@ -22,14 +22,14 @@ UIData="*res://globals/ui_data.gd"
 PlayerData="*res://globals/player_data.gd"
 SignalBus="*res://globals/signal_bus.gd"
 Databases="*res://globals/databases.gd"
-BattleManager="*res://battle_scene/battle_manager.tscn"
+BattleManager="*res://battle_scene/battle_manager.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/window_width_override=640
-window/size/window_height_override=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/dpi/allow_hidpi=false
@@ -41,11 +41,25 @@ project/assembly_name="Min Hero"
 [editor]
 
 movie_writer/mjpeg_quality=1.0
-movie_writer/movie_file="D:/Folders/Videos/Godot/Min-Hero-HD.avi"
+movie_writer/movie_file="E:/System Folders/Videos/godot-hero.avi"
 
 [editor_plugins]
 
 enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "gray",
+"res://battle_scene/": "red",
+"res://characters/": "orange",
+"res://floors/": "yellow",
+"res://globals/": "green",
+"res://minions/": "blue",
+"res://modules/": "purple",
+"res://moves/": "pink",
+"res://tools/": "gray"
+}
 
 [filesystem]
 
