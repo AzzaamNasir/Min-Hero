@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=3 uid="uid://dh51p6fm3ucua"]
 
-[ext_resource type="Script" path="res://characters/player/player.gd" id="1_jcit1"]
+[ext_resource type="Script" uid="uid://cn4s4pmoaebix" path="res://characters/player/player.gd" id="1_jcit1"]
 [ext_resource type="SpriteFrames" uid="uid://bwvkw48rj2q5f" path="res://characters/player/assets/female/anim_sprite.tres" id="2_gx1bo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q57pn"]
@@ -312,14 +312,14 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ecqxj"]
 _data = {
-"idle_down": SubResource("Animation_dnhsp"),
-"idle_left": SubResource("Animation_ro12s"),
-"idle_right": SubResource("Animation_qfuwb"),
-"idle_up": SubResource("Animation_e0qel"),
-"move_down": SubResource("Animation_2q34m"),
-"move_left": SubResource("Animation_1tdi8"),
-"move_right": SubResource("Animation_buxjs"),
-"move_up": SubResource("Animation_ujj83")
+&"idle_down": SubResource("Animation_dnhsp"),
+&"idle_left": SubResource("Animation_ro12s"),
+&"idle_right": SubResource("Animation_qfuwb"),
+&"idle_up": SubResource("Animation_e0qel"),
+&"move_down": SubResource("Animation_2q34m"),
+&"move_left": SubResource("Animation_1tdi8"),
+&"move_right": SubResource("Animation_buxjs"),
+&"move_up": SubResource("Animation_ujj83")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1yym6"]

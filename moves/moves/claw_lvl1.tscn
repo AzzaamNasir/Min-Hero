@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnvupx4cxd5ol"]
 
-[ext_resource type="Script" path="res://moves/move.gd" id="1_owjmr"]
+[ext_resource type="Script" uid="uid://duecjre4oeaua" path="res://moves/move.gd" id="1_owjmr"]
 [ext_resource type="Resource" uid="uid://c6kf2atqmitb8" path="res://moves/resources/claw_lvl1.tres" id="2_4yfo3"]
-[ext_resource type="Script" path="res://moves/move_anims/move_anim.gd" id="3_o8v1a"]
-[ext_resource type="Script" path="res://moves/move_anims/slide_anim.gd" id="4_d0so7"]
+[ext_resource type="Script" uid="uid://b7bn2fl34sgh0" path="res://moves/move_anims/move_anim.gd" id="3_o8v1a"]
+[ext_resource type="Script" uid="uid://cx076npvgexf2" path="res://moves/move_anims/slide_anim.gd" id="4_d0so7"]
 [ext_resource type="Texture2D" uid="uid://byjbqvb2nvlp8" path="res://moves/assets/skill_anims/claw.png" id="5_jg5e8"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vhd4"]

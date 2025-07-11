@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dij02i442orwy"]
 
 [ext_resource type="Theme" uid="uid://ikg53t3xsgjn" path="res://ui/assets/dialogue/dialogue.tres" id="1_x3cog"]
-[ext_resource type="Script" path="res://characters/opponents/dialogue_manager.gd" id="2_7406y"]
+[ext_resource type="Script" uid="uid://dtfnmjq2gmtg8" path="res://characters/opponents/dialogue_manager.gd" id="2_7406y"]
 [ext_resource type="Texture2D" uid="uid://disux7f0k3s4x" path="res://ui/assets/dialogue/down_arrow.png" id="3_1pl4e"]
 
 [node name="DialogueBox" type="Panel"]

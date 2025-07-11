@@ -1,16 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://cib8ns8cxgead"]
+[gd_scene load_steps=8 format=3 uid="uid://cib8ns8cxgead"]
 
-[ext_resource type="Script" path="res://modules/floor_select_view.gd" id="1_rj7fk"]
-[ext_resource type="Texture2D" uid="uid://dc45arb4ys8c3" path="res://floors/assets/floor_selector/745_Utilities.SpriteHandler_roomSelect_plantRoom.png" id="2_730pt"]
-[ext_resource type="Texture2D" uid="uid://bnd5sfb8jskqu" path="res://floors/assets/floor_selector/436_Utilities.SpriteHandler_roomSelect_towerCovered.png" id="4_k7g0g"]
-[ext_resource type="Texture2D" uid="uid://s7w2ehg5qgxs" path="res://floors/assets/floor_selector/1305_Utilities.SpriteHandler_roomSelect_towerCoveredLock.png" id="5_d4o5r"]
-[ext_resource type="Texture2D" uid="uid://bt7crjulnub75" path="res://floors/assets/floor_selector/170_Utilities.SpriteHandler_roomSelect_roomFont_1.png" id="5_myqld"]
-[ext_resource type="Texture2D" uid="uid://dk4wr6rv0ev8u" path="res://floors/assets/floor_selector/169_Utilities.SpriteHandler_roomSelect_roomFont_2.png" id="6_6n2kv"]
-[ext_resource type="Texture2D" uid="uid://dtl326oom8kva" path="res://floors/assets/floor_selector/125_Utilities.SpriteHandler_roomSelect_roomFont_z.png" id="6_ovoxp"]
+[ext_resource type="Script" uid="uid://cd521bvn43seu" path="res://modules/floor_select_view.gd" id="1_rj7fk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2whv"]
-atlas = ExtResource("2_730pt")
 region = Rect2(5, 7, 194, 97)
+
+[sub_resource type="Resource" id="Resource_gkdpp"]
+metadata/__load_path__ = "res://floors/assets/floor_selector/436_Utilities.SpriteHandler_roomSelect_towerCovered.png"
+
+[sub_resource type="Resource" id="Resource_olgsw"]
+metadata/__load_path__ = "res://floors/assets/floor_selector/1305_Utilities.SpriteHandler_roomSelect_towerCoveredLock.png"
+
+[sub_resource type="Resource" id="Resource_3qvht"]
+metadata/__load_path__ = "res://floors/assets/floor_selector/170_Utilities.SpriteHandler_roomSelect_roomFont_1.png"
+
+[sub_resource type="Resource" id="Resource_6thx8"]
+metadata/__load_path__ = "res://floors/assets/floor_selector/125_Utilities.SpriteHandler_roomSelect_roomFont_z.png"
+
+[sub_resource type="Resource" id="Resource_w0cvv"]
+metadata/__load_path__ = "res://floors/assets/floor_selector/169_Utilities.SpriteHandler_roomSelect_roomFont_2.png"
 
 [node name="Floor" type="Node2D"]
 scale = Vector2(2.68, 2.68)
@@ -25,12 +33,12 @@ unique_name_in_owner = true
 
 [node name="Bars" type="Sprite2D" parent="Background"]
 position = Vector2(-3, -4)
-texture = ExtResource("4_k7g0g")
+texture = SubResource("Resource_gkdpp")
 
 [node name="Lock" type="Sprite2D" parent="Background"]
 position = Vector2(-0.5, 0)
 scale = Vector2(0.977273, 1)
-texture = ExtResource("5_d4o5r")
+texture = SubResource("Resource_olgsw")
 
 [node name="Number" type="Node2D" parent="."]
 visible = false
@@ -38,13 +46,13 @@ visible = false
 [node name="AreaNumber" type="Sprite2D" parent="Number"]
 unique_name_in_owner = true
 position = Vector2(-45, 0)
-texture = ExtResource("5_myqld")
+texture = SubResource("Resource_3qvht")
 
 [node name="Dash" type="Sprite2D" parent="Number"]
 position = Vector2(0, 10)
-texture = ExtResource("6_ovoxp")
+texture = SubResource("Resource_6thx8")
 
 [node name="FloorNumber" type="Sprite2D" parent="Number"]
 unique_name_in_owner = true
 position = Vector2(44, 0)
-texture = ExtResource("6_6n2kv")
+texture = SubResource("Resource_w0cvv")

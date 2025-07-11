@@ -13,7 +13,7 @@ config_version=5
 config/name="Min Hero PC"
 config/tags=PackedStringArray("project")
 run/main_scene="res://battle_scene/battle_arena.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -31,7 +31,6 @@ window/size/viewport_height=1080
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 window/dpi/allow_hidpi=false
 
 [dotnet]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bigfvt061brtn" path="res://ui/assets/skill_tree/pattern_background.png" id="1_11bfn"]
 [ext_resource type="Texture2D" uid="uid://1fdwc27ml6su" path="res://ui/assets/skill_tree/exit_button.png" id="2_5a8mh"]
-[ext_resource type="Script" path="res://ui/battle/skill_tree.gd" id="2_wkjbd"]
+[ext_resource type="Script" uid="uid://cof7081oq2djl" path="res://ui/battle/skill_tree.gd" id="2_wkjbd"]
 [ext_resource type="Texture2D" uid="uid://cftun8hw3vdbv" path="res://ui/assets/skill_tree/background.png" id="3_26g0b"]
 [ext_resource type="Texture2D" uid="uid://dvebpxwkdvki2" path="res://ui/assets/skill_tree/side_tree.png" id="4_fjhcx"]
 [ext_resource type="Texture2D" uid="uid://u7knwldx4p0e" path="res://ui/assets/skill_tree/center_tree.png" id="4_qyv84"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://gwkc83yiivw7"]
 
 [ext_resource type="Texture2D" uid="uid://bk53nuxihpvy5" path="res://ui/assets/minion/move_menu_bg.png" id="1_dgn76"]
-[ext_resource type="Script" path="res://ui/battle/move_menu.gd" id="2_asxll"]
+[ext_resource type="Script" uid="uid://ck50v02ngtdvv" path="res://ui/battle/move_menu.gd" id="2_asxll"]
 [ext_resource type="Texture2D" uid="uid://cxb580x03a0fl" path="res://ui/assets/minion/battleScreenfillBarenergyFill.png" id="3_fvrty"]
 [ext_resource type="FontFile" uid="uid://rscyjpse26wp" path="res://ui/assets/Burbin Casual NC.ttf" id="4_qirll"]
 

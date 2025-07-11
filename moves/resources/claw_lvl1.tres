@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3 uid="uid://c6kf2atqmitb8"]
 
-[ext_resource type="Script" path="res://moves/move_effects/move_effects.gd" id="1_5rdjy"]
-[ext_resource type="Script" path="res://moves/move_effects/enemy_damage.gd" id="2_mrbp5"]
-[ext_resource type="Script" path="res://moves/move_data.gd" id="2_mtpg8"]
+[ext_resource type="Script" uid="uid://cm3qx1vw7i7pw" path="res://moves/move_effects/move_effects.gd" id="1_5rdjy"]
+[ext_resource type="Script" uid="uid://kleu3s1p3ryt" path="res://moves/move_effects/enemy_damage.gd" id="2_mrbp5"]
+[ext_resource type="Script" uid="uid://dj6xbmwdqlof8" path="res://moves/move_data.gd" id="2_mtpg8"]
 [ext_resource type="Texture2D" uid="uid://dc2o1pirgmjxu" path="res://moves/assets/skill_icons/claw.png" id="3_xldxd"]
 
 [sub_resource type="Resource" id="Resource_peact"]
